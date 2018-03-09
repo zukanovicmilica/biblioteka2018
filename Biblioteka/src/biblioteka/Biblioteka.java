@@ -32,12 +32,9 @@ public class Biblioteka implements BibilotekaInterfejs {
 	@Override
 	public LinkedList<Knjiga> pronadjiKnjigu(Autor autor, String isbn, String naslov, String izdavac) {
 		if (naslov == null)
-			return null;
+			throw new RuntimeException("Morate uneti naslov.");
 
 		LinkedList<Knjiga> novaLista = new LinkedList<Knjiga>();
-
-		if (naslov == null)
-			throw new RuntimeException("Morate uneti naslov.");
 
 		for (int i = 0; i < knjige.size(); i++) {
 			if (knjige.get(i).getNaslov().contains(naslov))
