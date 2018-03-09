@@ -1,8 +1,8 @@
 package biblioteka;
 
 public class Autor {
-	
-	private String ime,prezime;
+
+	private String ime, prezime;
 
 	public String getIme() {
 		return ime;
@@ -55,7 +55,5 @@ public class Autor {
 			return false;
 		return true;
 	}
-	
-	
 
 }
